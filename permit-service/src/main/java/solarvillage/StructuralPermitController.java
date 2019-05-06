@@ -10,16 +10,20 @@ public class StructuralPermitController {
 
     @PostMapping("/permit/structural")
     public String submitPermitRequest() {
-        return String.valueOf(counter.incrementAndGet());
+        String id = "s" + String.valueOf(counter.incrementAndGet());
+        System.out.println("called permit-structural-submitPermitRequest " + id);
+        return id;
     }
 
     @GetMapping("/permit/structural/{id}")
-    public PermitStatus getPermitRequestStatus(@PathVariable String id) {
-        return new PermitStatus(id, "APPROVED");
+    public String getPermitRequestStatus(@PathVariable String id) {
+        System.out.println("called permit-structural-getPermitRequestStatus " + id);
+        return "APPROVED";
     }
 
     @DeleteMapping("/permit/structural/{id}")
     public String rescindPermit(@PathVariable String id) {
+        System.out.println("called permit-structural-rescindPermit " + id);
         return "Structural permit application " + id + " rescinded.";
     }
 

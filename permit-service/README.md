@@ -1,8 +1,8 @@
 # Permit Application rest services
 ## run application
-`cd permit-service`
-`mvn clean package`
-`java -jar target/permit-service-1.0.0.jar`
+`cd permit-service`  
+`mvn clean package`  
+`java -jar target/permit-service-1.0.0.jar`  
 ## test rest APIs
 ### electric permit
 #### new application
